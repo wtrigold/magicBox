@@ -1,0 +1,40 @@
+.drawHotAreaContent {
+    width: 320px;
+    height: auto;
+    /*margin: 60px;*/
+    position: relative;
+    transform: translate3d(0,0,0);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.drawHotAreaBg{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.react-drag{
+    border: 1px solid #38f;
+    background: rgba(51,136,255,.5);
+    color: #fff;
+    position: absolute;
+    cursor: move;
+    user-select: auto;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+}
+.drag-close{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    text-align: center;
+    font-size: 8px;
+    line-height: 12px;
+    display: none;
+}

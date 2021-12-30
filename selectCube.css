@@ -1,0 +1,310 @@
+ul {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.pageContent {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0,0,0);
+}
+
+/*.layout{*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*background: white;*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*display: flex;*/
+/*display: -webkit-flex;*/
+/*align-items: center;*/
+/*justify-content: center;*/
+/*}*/
+.layout {
+    clear: both;
+    position: relative;
+    /*width: 320px;*/
+    margin: 20px;
+}
+
+.layout ul {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+
+.layout li {
+    float: left;
+    background: #EBF8FD;
+    color: #88c4dc;
+    border: 1px solid #bdf;
+    cursor: pointer;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.layout li div {
+    text-align: center;
+}
+
+.layout p {
+    margin-top: 10px;
+    color: #999;
+    font-size: 12px;
+    float: right;
+}
+
+/*自定义魔方*/
+.layout li.custom-rubik-cube {
+    /*width: 25%;*/
+    /*height: 70px;*/
+    border: 1px solid #e5e5e5;
+    border-left: 0;
+    border-bottom: 0;
+    background: #f8f8f8;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.layout li.custom-rubik-cube:nth-child(7n+1) {*/
+/*border-left: 1px solid #e5e5e5;*/
+/*}*/
+
+.layout ul:last-child li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.layout li.custom-rubik-cube > div {
+    /*padding-top: 23px;*/
+    font-size: 20px;
+    color: #bbb;
+}
+
+.layout li.custom-rubik-cube.selected {
+    background: #EBF8FD;
+}
+
+.layout div.selected-rubik-cube {
+    position: absolute;
+    border: 1px solid #0f36ff;
+    background: #e8f7fd;
+    text-align: center;
+    color: #88c4dc;
+    font-size: 12px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/*.layout div.selected-rubik-cube:hover:after{*/
+/*content: "x";*/
+/*width: 20px;*/
+/*height: 20px;*/
+/*border-radius: 10px;*/
+/*background: #bbb;*/
+/*font-size: 14px;*/
+/*color: white;*/
+/*position: absolute;*/
+/*right: -10px;*/
+/*top: -10px;*/
+/*}*/
+
+.selected-rubik-cube-content {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #bbb;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.select-pic-jump {
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #ddd;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.add-icon {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    color: #38f;
+}
+
+.add-text {
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    color: #38f;
+}
+
+.popup-select-transparent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 12;
+}
+
+.popup-select-content {
+    width: 0;
+    height: 0;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.select-head {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #f8f8f8;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.select-head-close {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    color: #999999;
+    margin-left: auto;
+    line-height: 40px;
+    text-align: center;
+}
+
+.select-body {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    position: relative;
+}
+
+.select-body .icon {
+    width: 80px;
+    height: 80px;
+    border: 1px dashed white;
+    margin: 5px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.popup-select-content .ok {
+    width: 100px;
+    height: 36px;
+    background: #38f;
+    line-height: 36px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    color: white;
+    border-radius: 3px;
+}
+
+.select-cube-size {
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 160px;
+    height: 30px;
+    margin: 19px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.current-cube-text {
+    color: black;
+    margin-left: 5px;
+}
+
+.current-cube-icon {
+    margin-left: auto;
+    margin-right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid black;
+}
+
+.select-cube-content {
+    position: absolute;
+    top: 35px;
+    width: 160px;
+    height: 120px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    z-index: 11;
+    border-radius: 3px;
+    background: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+    /*border: 1px solid #e5e5e5;*/
+}
+
+.select-cube-content::-webkit-scrollbar {
+    /*display: none;*/
+    width: 2px;
+    height: 10px;
+}
+
+.select-cube-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(149, 149, 149, 0.3);
+    background-color: #d3dbee;
+}
+
+.select-cube-item {
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 5px;
+}
+
+.select-cube-item:hover {
+    background: #38f;
+    color: white;
+}

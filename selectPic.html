@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cubeDemo</title>
+    <link rel="stylesheet" href="selectCube.css">
+    <link rel="stylesheet" href="drawHotArea.css">
+    <!--<script src="jquery-1.8.0.min.js"></script>-->
+    <!--<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="selectCube.js"></script>
+    <script src="drawHotArea.js"></script>
+</head>
+<body>
+<div class="pageContent">
+
+
+    <div  style="margin: 60px">
+        <div class="drawHotAreaContent">
+            <img class="drawHotAreaBg" draggable="false" src="https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg">
+
+            <div class="react-drag" style="width: 100px;height: 100px;transform: translateX(0px) translateY(0px);left: 10px;top: 10px;">
+                <!--<div class="drag-close">x</div>-->
+            </div>
+        </div>
+    </div>
+
+
+    <!--魔方选择框-->
+
+
+    <div class="select-cube-size">
+        <div class="current-cube-text">4x4</div>
+        <div class="current-cube-icon"></div>
+        <div class="select-cube-content"></div>
+    </div>
+    <!--魔方-->
+    <div class="layout">
+        <div class="cube-wrap"></div>
+
+    </div>
+    <!--选择图片暂不需要-->
+    <div class="select-pic-jump">
+        <div>
+            <div class="add-icon">+</div>
+            <div class="add-text">添加图片</div>
+        </div>
+    </div>
+
+    <div class="popup-select-transparent">
+        <div class="popup-select-content">
+            <div class="select-head">
+                <div class="select-head-close">x</div>
+            </div>
+            <div class="select-body">
+                <div class="icon" data-index="0"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+                <div class="icon" data-index="1"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FrO2vCvL8G4V16qmeFM1N31Vmby2.png?imageView2/2/w/240/h/240/q/75/format/webpg')"></div>
+                <div class="icon" data-index="2"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/Fpl7G_83VnyTHDVQYIuEaO1R1Bbn.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="3"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FugEAWwRGavXRL3Roh96MHY57M-z.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="4"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/Fo4O_4M9L4Rpikjmo94ftZG7At7s.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="5"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/27/FiS35Fs_qTzOpc_O-Fus7aVTWHOh.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="6"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/27/FuOoXmJkSl8FyiDrSlXecbH7NuFx.png?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="7"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/27/FuOoXmJkSl8FyiDrSlXecbH7NuFx.png?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="8"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/22/FuOoXmJkSl8FyiDrSlXecbH7NuFx.png?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="9"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2015/02/03/30e507926a50aabf835040e43bbcccf9.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="10"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2015/02/02/e997a44e10d847bffbf91da4480b6bf2.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="11"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2015/02/02/f58cd7692ea47f17f0076d5ce3f7aea8.jpg?imageView2/2/w/240/h/240/q/75/format/webp')"></div>
+                <div class="icon" data-index="12"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+                <div class="icon" data-index="13"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+                <div class="icon" data-index="14"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+                <div class="icon" data-index="15"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+                <div class="icon" data-index="16"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+                <div class="icon" data-index="17"
+                     style="background: url('https://img.yzcdn.cn/upload_files/2016/07/28/FqeeqODZkdqA6sU8J_cW5a9G6qeR.jpg')"></div>
+
+
+            </div>
+            <div class="ok" id="select-ok-pic">确定</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
